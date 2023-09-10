@@ -33,7 +33,11 @@ class NumberGuessingGame implements GuessingGame {
         frame.setSize(400, 150); // Définir la taille de la fenêtre
         frame.setLayout(new FlowLayout()); // Utiliser un gestionnaire de disposition de type FlowLayout
 
+<<<<<<< HEAD
         JLabel label = new JLabel("Devinez un nombre entre 1 et 5:"); // Création d'une étiquette
+=======
+        JLabel label = new JLabel("Devinez un nombre entre 1 et 100:"); // Création d'une étiquette
+>>>>>>> 680418f76e447f067831ba86fa019ede3de40649
         JTextField textField = new JTextField(10); // Création d'un champ de texte pour l'entrée du nombre
         JButton guessButton = new JButton("Devinez"); // Création d'un bouton de devinette
         JLabel resultLabel = new JLabel(""); // Création d'une étiquette pour afficher les résultats
