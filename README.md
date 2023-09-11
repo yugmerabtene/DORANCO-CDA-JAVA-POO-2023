@@ -5,7 +5,7 @@ OBJECTIFS PEDAGOGIQUES
 
 PROGRAMME
 PRÉSENTATION
-•	  Différents styles de programmation
+•	 Différents styles de programmation
 • 	Avantages de la programmation objet
 • 	Programmation modulaire
 • 	L’abstraction et la spécialisation
