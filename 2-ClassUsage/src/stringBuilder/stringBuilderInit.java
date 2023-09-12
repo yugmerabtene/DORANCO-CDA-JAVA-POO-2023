@@ -1,19 +1,39 @@
 package stringBuilder;
 
 public class stringBuilderInit {
-	public static void main(String[] args) {
-        // Étape 1 : Création d'un objet StringBuilder
-        StringBuilder stringBuilder = new StringBuilder();
+    public static void main(String[] args) {
+        // Utilisation de String (inefficace)
+        String concatString = ""; // Crée une chaîne vide pour la concaténation ultérieure
 
-        // Étape 2 : Ajout de contenu
-        stringBuilder.append("Hello, "); // Ajoute "Hello, "
-        stringBuilder.append("world!"); // Ajoute "world!"
+        // Commencez par String
+        long startTimeString = System.nanoTime(); // Enregistre l'heure de début de l'opération avec String
 
-        // Étape 3 : Conversion en chaîne de caractères
-        String finalString = stringBuilder.toString();
+        for (int i = 0; i < 10000; i++) {
+            concatString += "some text"; // Concaténation de chaînes avec l'opérateur '+' (inefficace) dans une boucle
+        }
 
-        // Étape 4 : Affichage de la chaîne finale
-        System.out.println(finalString); // Affiche "Hello, world!"
+        long endTimeString = System.nanoTime(); // Enregistre l'heure de fin de l'opération avec String
+        long durationWithString = endTimeString - startTimeString; // Calcule la durée de l'opération
+
+        System.out.println("Utilisation de String (inefficace) :");
+        System.out.println("Avec String : " + durationWithString + " nanosecondes"); // Affiche la durée de l'opération
+
+        // Utilisation de StringBuilder (efficace)
+        StringBuilder stringBuilder = new StringBuilder(); // Crée un objet StringBuilder pour la concaténation efficace
+
+        // Commencez par StringBuilder
+        long startTimeStringBuilder = System.nanoTime(); // Enregistre l'heure de début de l'opération avec StringBuilder
+
+        for (int i = 0; i < 10000; i++) {
+            stringBuilder.append("some text"); // Utilisation de StringBuilder dans une boucle
+        }
+
+        long endTimeStringBuilder = System.nanoTime(); // Enregistre l'heure de fin de l'opération avec StringBuilder
+        long durationWithStringBuilder = endTimeStringBuilder - startTimeStringBuilder; // Calcule la durée de l'opération
+
+        System.out.println("\nUtilisation de StringBuilder (efficace) :");
+        
+        System.out.println("Avec StringBuilder : " + durationWithStringBuilder + " nanosecondes"); 
+        
     }
-
 }

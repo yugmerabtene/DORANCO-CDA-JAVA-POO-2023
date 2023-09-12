@@ -1,30 +1,33 @@
 package dateFormat;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate; // Importez la classe LocalDate pour travailler avec les dates
+import java.time.LocalTime; // Importez la classe LocalTime pour travailler avec l'heure
+import java.time.LocalDateTime; // Importez la classe LocalDateTime pour travailler avec les dates et l'heure
+import java.time.format.DateTimeFormatter; // Importez la classe DateTimeFormatter pour formater les dates
 
 public class InitDateFormat {
-    public static void main(String[] args) {
-        // Créez un objet SimpleDateFormat avec le format de date souhaité
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+  public static void main(String[] args) {
+    // Exemple 1 : Afficher la date actuelle
+    LocalDate currentDate = LocalDate.now(); // Créez un objet de date
+    System.out.println("Date actuelle : " + currentDate);
 
-        // Obtenez la date et l'heure actuelles
-        Date date = new Date();
+    // Exemple 2 : Afficher l'heure actuelle
+    LocalTime currentTime = LocalTime.now(); // Créez un objet de temps
+    System.out.println("Heure actuelle : " + currentTime);
 
-        // Formatez la date en une chaîne de caractères dans le format spécifié
-        String dateStr = sdf.format(date);
-        System.out.println("Date formatée : " + dateStr);
+    // Exemple 3 : Afficher la date et l'heure actuelles
+    LocalDateTime currentDateTime = LocalDateTime.now(); // Créez un objet de date et d'heure
+    System.out.println("Date et heure actuelles : " + currentDateTime);
 
-        // Exemple de chaîne de date à parser
-        String dateStrToParse = "09/09/2023 14:30:00";
+    // Exemple 4 : Formater la date et l'heure actuelles
+    LocalDateTime formattedDateTime = LocalDateTime.now(); // Créez un objet de date et d'heure
+    System.out.println("Avant le formatage : " + formattedDateTime);
 
-        try {
-            // Parsez la chaîne de date en objet Date
-            Date parsedDate = sdf.parse(dateStrToParse);
-            System.out.println("Date parsée : " + parsedDate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    // Créez un objet DateTimeFormatter avec le format souhaité
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
+    // Utilisez le formateur pour obtenir la date et l'heure au format spécifié
+    String formattedDate = formattedDateTime.format(myFormatObj);
+    System.out.println("Après le formatage : " + formattedDate);
+  }
 }
-

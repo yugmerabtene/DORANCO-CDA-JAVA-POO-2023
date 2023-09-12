@@ -1,9 +1,5 @@
 package random;
 import java.util.Random;
-
-
-
-import java.util.Random;
 import java.util.Scanner; // Importez Scanner
 
 public class GuessingGameLogic implements GuessingGame {
@@ -69,4 +65,8 @@ public class GuessingGameLogic implements GuessingGame {
         return guess;
     }
 }
+
+
+
+
 
