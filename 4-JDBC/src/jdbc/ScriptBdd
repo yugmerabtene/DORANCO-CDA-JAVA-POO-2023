@@ -1,0 +1,23 @@
+-- Création de la table "etudiants"
+CREATE TABLE etudiants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255),
+    prenom VARCHAR(255),
+    date_naissance DATE,
+    email VARCHAR(255),
+    matricule VARCHAR(255)
+);
+
+-- Insertion de 10 étudiants aléatoires
+INSERT INTO etudiants (nom, prenom, date_naissance, email, matricule)
+VALUES
+    ('Dupont', 'Jean', '2000-01-15', 'jean.dupont@example.com', 'E12345'),
+    ('Martin', 'Sophie', '2001-03-20', 'sophie.martin@example.com', 'E23456'),
+    ('Lefebvre', 'Thomas', '1999-07-10', 'thomas.lefebvre@example.com', 'E34567'),
+    ('Dubois', 'Marie', '2002-05-08', 'marie.dubois@example.com', 'E45678'),
+    ('Thomas', 'Julien', '2003-09-25', 'julien.thomas@example.com', 'E56789'),
+    ('Petit', 'Emma', '2000-11-14', 'emma.petit@example.com', 'E67890'),
+    ('Moreau', 'Lucas', '1998-12-30', 'lucas.moreau@example.com', 'E78901'),
+    ('Fournier', 'Alice', '2001-06-05', 'alice.fournier@example.com', 'E89012'),
+    ('Roux', 'Hugo', '2002-04-18', 'hugo.roux@example.com', 'E90123'),
+    ('Garcia', 'Léa', '1999-02-03', 'lea.garcia@example.com', 'E01234');

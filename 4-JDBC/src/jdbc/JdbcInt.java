@@ -3,7 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Jdbc {
+public class JdbcInt {
     public static void main(String[] args) {
         // Informations de connexion à la base de données
         String jdbcUrl = "jdbc:mysql://localhost:3306/java"; // URL de la base de données (changez-la en fonction de votre configuration)
