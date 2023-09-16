@@ -1,13 +1,18 @@
 package jdbc;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class EtudiantRepositoryImpl implements EtudiantRepository {
-    private String jdbcUrl = "jdbc:mysql://localhost:3306/java";
-    private String user = "root";
-    private String password = "";
+    private String jdbcUrl = "jdbc:mysql://localhost:3306/java"; // URL de la base de données
+    private String user = "root";                                  // Nom d'utilisateur MySQL
+    private String password = "";                                  // Mot de passe MySQL
 
     // Méthode pour obtenir la liste complète des étudiants
     @Override

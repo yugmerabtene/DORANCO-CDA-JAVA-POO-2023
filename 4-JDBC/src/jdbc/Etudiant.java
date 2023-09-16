@@ -3,12 +3,12 @@ package jdbc;
 import java.util.Date;
 
 public class Etudiant {
-    private int id;
-    private String nom;
-    private String prenom;
-    private Date dateNaissance;
-    private String email;
-    private String matricule;
+    private int id;                 // Identifiant unique de l'étudiant
+    private String nom;             // Nom de l'étudiant
+    private String prenom;          // Prénom de l'étudiant
+    private Date dateNaissance;    // Date de naissance de l'étudiant
+    private String email;           // Adresse e-mail de l'étudiant
+    private String matricule;       // Matricule de l'étudiant
 
     // Constructeur par défaut
     public Etudiant() {}
