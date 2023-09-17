@@ -16,8 +16,10 @@ public class GuessingGameLogic implements GuessingGame {
     }
 
     public void startGame() {
-        GameUi ui = new GameUi(this); // Crée une instance de l'interface utilisateur et passe cette instance de jeu
-        ui.createUI(); // Crée l'interface utilisateur
+        // Crée une instance de l'interface utilisateur et passe cette instance de jeu
+        GameUi ui = new GameUi(this);
+        // Crée l'interface utilisateur
+        ui.createUI();
     }
 
     public void checkGuess(int guess) {
