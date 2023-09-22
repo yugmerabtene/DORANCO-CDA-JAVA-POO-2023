@@ -1,3 +1,4 @@
 module rmi {
-	requires java.rmi;
+    exports rmi;
+    requires java.rmi;
 }

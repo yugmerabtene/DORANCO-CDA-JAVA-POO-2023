@@ -8,4 +8,3 @@ public interface CalculatorInterface extends Remote {
     // Cette méthode permet d'ajouter deux nombres
     int add(int a, int b) throws RemoteException;
 }
-
