@@ -5,10 +5,10 @@ import java.util.Queue;
 
 public class InitQueue {
     public static void main(String[] args) {
-        // Création d'une file d'attente (queue) en utilisant LinkedList
+        // CrÃ©ation d'une file d'attente (queue) en utilisant LinkedList
         Queue<String> queue = new LinkedList<>();
 
-        // Enfilez des éléments dans la file d'attente
+        // Placer des Ã©lÃ©ments dans la file d'attente
         queue.offer("Client 1");
         queue.offer("Client 2");
         queue.offer("Client 3");
@@ -16,14 +16,14 @@ public class InitQueue {
         // Affichez la file d'attente
         System.out.println("File d'attente initiale : " + queue);
 
-        // Défilez des éléments (retirez de la tête de la file)
+        // DÃ©filez des Ã©lÃ©ments (retirez de la tÃªte de la file)
         String clientServi = queue.poll();
         System.out.println(clientServi + " est servi."); 
 
-        // Affichez la file d'attente après le service
-        System.out.println("File d'attente après service : " + queue);
+        // Affichez la file d'attente aprÃ¨s le service
+        System.out.println("File d'attente aprÃ¨s service : " + queue);
 
-        // Accédez à l'élément en tête de la file sans le retirer
+        // AccÃ©dez Ã  l'Ã©lÃ©ment en tÃªte de la file sans le retirer
         String prochainClient = queue.peek();
         System.out.println("Prochain client en attente : " + prochainClient);
     }
