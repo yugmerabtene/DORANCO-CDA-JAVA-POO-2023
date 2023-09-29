@@ -8,7 +8,7 @@ Objectifs Pédagogiques :
 
 Savoir utiliser le langage Java.
 Contenu du Programme :
-Bien sûr, voici la liste numérotée du programme "Initiation au Langage Java" pour votre README :
+
 
 1. **Objectifs Pédagogiques :** 
    - Savoir utiliser le langage Java.
